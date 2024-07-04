@@ -42,12 +42,16 @@ To this end, I will use the Github Project's Kanban feature to create tickets, t
 Tickets are moved through each category as they are needed. Each begins within "Backlog", within which they are worked on and finalized. Some tickets may need several revisions before being moved to the ready column. Once a ready ticket is going to be worked on it's moved to "in progress", and then moved either back to the backlog if revisions are needed or to "Review" to check all requirements are met, and then finally moved to "Done".
 
 Tickets are also grouped together in two ways to ensure they are found easily:
-![Example Ticket](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/cb41792b-5740-49d7-86a7-ee04c235fc7b)
+![Example Ticket](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/41a1ebb0-45af-47a2-b946-617f827521c6)
 
 Each ticket has been named with a tag at the start, for this example it is "DOC - ", short for Documentation. Similarly, tags are utilised, as seen with the "documentation" tag. Combined, each ticket's purpose is clearly displayed.
 
-Other key points from this example are the User story and Requirements sections.
+### Other Key Points
+
+This example also includes a User story and Requirements section as is standard for all my tickets.
 Each ticket has an attached User Story, providing context as to who will work on the task, what the task is, and what value it creates.
 The requirements are also important as they are how a ticket is judged for progress. Only once every requirement is reached can the ticket be moved into the "Done" column.
+
+The last key note is how updates are added to this project. Utilising Githubs pull requests feature, changes can be made in different branches before being commited to main, and as such developments can be made incrementally. For Example, ticket #2 as shown above talks on including pull requests, of which was missed during the initial writeup whilst the ticket was in progress and this oversigt was discovered during the "in review" column, and moved back to in progress. With this paragraph complete, the ticket will also have all requirements met and as such can be moved to "done". 
 
 ## Design
