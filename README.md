@@ -55,3 +55,10 @@ The requirements are also important as they are how a ticket is judged for progr
 The last key note is how updates are added to this project. Utilising Githubs pull requests feature, changes can be made in different branches before being commited to main, and as such developments can be made incrementally. For Example, ticket #2 as shown above talks on including pull requests, of which was missed during the initial writeup whilst the ticket was in progress and this oversigt was discovered during the "in review" column, and moved back to in progress. With this paragraph complete, the ticket will also have all requirements met and as such can be moved to "done". 
 
 ## Design
+For initial design, I have used Figma to create two drafts with one small difference. See the following:
+
+![image](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/80e5120d-0708-4edb-87ab-8cf59c355cc6)![image](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/9ae89615-e312-45fc-a49f-3a9dea847a9c)
+
+Both designs include the overall structure I aim to utilise with the tool, being a title, input textbox, output textbox, two dropdown boxes (to choose which currencies to convert between) and the option to display the conversion rate.
+
+The differnece between the designs is that of the dropdown boxes. While designing the tool it was evident that there are multiple ways to display which currency is selected. To decide as to which route to follow, I must explore the options available while developing the tool, and then conduct a survey as to which is ideal. 
