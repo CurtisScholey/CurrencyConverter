@@ -1,13 +1,13 @@
 /* css file to manage the format of the tool */
 
-/* styles.css */
-
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #830251; /* Page background color */
@@ -15,6 +15,7 @@ body {
     padding: 20px;
 }
 
+/* Converter container */
 .converter {
     max-width: 600px;
     margin: 0 auto;
@@ -25,34 +26,43 @@ body {
     border: 1px solid #ccc;
 }
 
+/* Header style */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #fff; /* Header text color */
 }
 
-.conversion-section {
+/* Conversion section grid layout */
+.conversion-section-1,
+.conversion-section-2 {
     display: grid;
-    grid-template-columns: 1fr auto; /* Input field takes most of the space, dropdown takes less */
-    gap: 10px; /* Gap between input field and dropdown */
+    grid-template-columns: 1fr 120px; /* Input field takes 1fr (remaining space), dropdown takes 120px */
+    grid-template-rows: auto auto; /* Two rows: auto height for both rows */
+    gap: 10px; /* Gap between input and dropdown */
     margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
-.input-field, .currency-dropdown {
+/* Input field style */
+.input-field {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Input field takes full width of its column */
 }
 
-.input-field {
-    width: calc(100% - 130px); /* Input field takes full width minus space for dropdown */
-}
-
+/* Currency dropdown style */
 .currency-dropdown {
-    width: 120px; /* Fixed width for dropdown */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Dropdown takes full width of its column */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
+/* Conversion rate display */
 .conversion-rate {
     margin-top: 10px;
     color: #fff; /* Conversion rate text color */
