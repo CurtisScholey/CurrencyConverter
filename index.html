@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>HTML Site Test - Currency Converter</title>
-  </head>
-  <!--Test Comment-->	
-  <body>
-    <h1>Heading Test</h1>
-    <p>Further text test.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Currency Converter</title>
+    <meta name="description" content="Currency Converter Tool">
+    <meta name="author" content="Curtis Scholey">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter">
+        <h1>Currency Converter</h1>
+        <div>
+            <label for="valueInput">Amount:</label>
+          <div>
+            <input type="number" id="valueInput" class="input-field" placeholder="Enter amount">
+          </div>
+        </div>
+        <div>
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency" class="input-field">
+                <!-- Options will be dynamically added using JavaScript -->
+            </select>
+        </div>
+      
+        <div>
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency" class="input-field">
+                <!-- Options will be dynamically added using JavaScript -->
+            </select>
+        </div>
+        <div class="result">
+            <strong>Result:</strong> <span id="convertedValue"></span>
+        </div>        
+        <button id="convertBtn" class="button">Convert</div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
