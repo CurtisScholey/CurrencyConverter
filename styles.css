@@ -29,8 +29,8 @@ h1 {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
-    width: 150px; /* Input box width */
+    width: 100%; /* Make input fields and dropdowns responsive */
+    margin-bottom: 10px;
 }
 
 .currency-dropdown {
@@ -40,6 +40,7 @@ h1 {
 .conversion-rate {
     margin-top: 10px;
     color: #fff; /* Conversion rate text color */
+    text-align: center;
 }
 
 .button {
