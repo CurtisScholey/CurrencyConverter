@@ -1,13 +1,6 @@
 /* css file to manage the format of the tool */
 
 /* styles.css */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #830251; /* Page background color */
