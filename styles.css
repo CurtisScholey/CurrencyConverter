@@ -34,11 +34,9 @@ h1 {
 }
 
 /* Conversion section grid layout */
-.conversion-section-1,
-.conversion-section-2 {
+.conversion-section {
     display: grid;
     grid-template-columns: 1fr 120px; /* Input field takes 1fr (remaining space), dropdown takes 120px */
-    grid-template-rows: auto auto; /* Two rows: auto height for both rows */
     gap: 10px; /* Gap between input and dropdown */
     margin-bottom: 10px; /* Bottom margin for spacing */
 }
@@ -68,5 +66,4 @@ h1 {
     color: #fff; /* Conversion rate text color */
     text-align: center;
 }
-
 
