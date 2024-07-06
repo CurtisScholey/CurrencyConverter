@@ -31,28 +31,26 @@ h1 {
     color: #fff; /* Header text color */
 }
 
-.conversion-section-1, .conversion-section-2 {
+.conversion-section {
     display: grid;
     grid-template-columns: 1fr auto; /* Input field takes most of the space, dropdown takes less */
     gap: 10px; /* Gap between input field and dropdown */
     margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
-.input-field {
+.input-field, .currency-dropdown {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%; /* Input field takes full width */
+}
+
+.input-field {
+    width: calc(100% - 130px); /* Input field takes full width minus space for dropdown */
 }
 
 .currency-dropdown {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: auto; /* Allow dropdown width to adjust based on content */
-    min-width: 120px; /* Dropdown has a minimum width */
+    width: 120px; /* Fixed width for dropdown */
 }
 
 .conversion-rate {
@@ -60,4 +58,5 @@ h1 {
     color: #fff; /* Conversion rate text color */
     text-align: center;
 }
+
 
