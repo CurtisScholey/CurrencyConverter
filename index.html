@@ -9,33 +9,32 @@
     <meta name="author" content="Curtis Scholey">
     <link rel="stylesheet" href="styles.css">
 </head>
+    
 <body>
     <div class="converter">
         <h1>Currency Converter</h1>
-        <div>
-            <label for="valueInput">Amount:</label>
-          <div>
-            <input type="number" id="valueInput" class="input-field" placeholder="Enter amount">
-          </div>
-        </div>
-        <div>
-            <label for="fromCurrency">From:</label>
-            <select id="fromCurrency" class="input-field">
+        
+        <!-- First Conversion Section (First input box and currency dropdown box) -->
+        <div class="conversion-section-1">
+            <input type="number" id="inputOne" class="input-field" placeholder="Enter amount">
+            <select id="currencyOne" class="currency-dropdown">
                 <!-- Options will be dynamically added using JavaScript -->
             </select>
         </div>
-      
-        <div>
-            <label for="toCurrency">To:</label>
-            <select id="toCurrency" class="input-field">
+
+        <!-- Second Conversion Section (Second input box and currency dropdown box) -->
+        <div class="conversion-section">
+            <input type="number" id="inputTwo" class="input-field" placeholder="Enter amount">
+            <select id="currencyTwo" class="currency-dropdown">
                 <!-- Options will be dynamically added using JavaScript -->
             </select>
         </div>
-        <div class="result">
-            <strong>Result:</strong> <span id="convertedValue"></span>
-        </div>        
-        <button id="convertBtn" class="button">Convert</div>
-    </div>
+
+        <!-- Conversion Rate Display -->
+        <div class="conversion-rate">
+            <strong>Conversion Rate:</strong> <span id="conversionRate"></span>
+        </div>
+
     <script src="script.js"></script>
 </body>
 </html>
