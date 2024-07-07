@@ -57,8 +57,19 @@ The last key note is how updates are added to this project. Utilising Githubs pu
 ## Design
 For initial design, I have used Figma to create two drafts with one small difference. See the following:
 
-![image](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/80e5120d-0708-4edb-87ab-8cf59c355cc6)![image](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/9ae89615-e312-45fc-a49f-3a9dea847a9c)
+![FigmaDesign1](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/80e5120d-0708-4edb-87ab-8cf59c355cc6)![FigmaDesign2](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/9ae89615-e312-45fc-a49f-3a9dea847a9c)
 
 Both designs include the overall structure I aim to utilise with the tool, being a title, input textbox, output textbox, two dropdown boxes (to choose which currencies to convert between) and the option to display the conversion rate.
 
 The differnece between the designs is that of the dropdown boxes. While designing the tool it was evident that there are multiple ways to display which currency is selected. To decide as to which route to follow, I must explore the options available while developing the tool, and then conduct a survey as to which is ideal. 
+
+### During Development
+
+During the development of the HTML and CSS files, it was found that the previous structure was unideal for navigation
+Specifically, the conversion should be automatic without having to click a button, as well as the option to input in both boxes should be available. Finally the conversion rate was reccomended to be shown:
+![Updated Design](https://github.com/CurtisScholey/CurrencyConverter/assets/97024501/78f459f5-6fda-4f6a-b705-c61a73387872)
+
+The colours used are those specified by the companies branding: https://onbrand.astrazeneca.com/content/intelligentcontent/cabrandportal/brand/astrazeneca/astrazeneca-brand-portal.html
+
+
+
