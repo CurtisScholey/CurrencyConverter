@@ -1,0 +1,15 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Currency converter app for Software Engineering Summative 1",
+  "main": "index.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Curtis Scholey",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.1.0"
+  }
+}
