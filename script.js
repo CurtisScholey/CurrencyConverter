@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne');
     const currencyTwo = document.getElementById('currencyTwo');
-    const apiKey = '132e8ef7c1d49498628ffb91'; // Replace with your actual API key
+    const apiKey = '132e8ef7c1d49498628ffb91'; // API key
 
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
