@@ -1,69 +1,60 @@
 /* css file to manage the format of the tool */
 
-/* Reset styles */
+/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #830251; /* Page background color */
-    color: #000; /* Text color */
+    background-color: #830251;
+    color: #000;
     padding: 20px;
 }
 
-/* Converter container */
 .converter {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #9eb0ac; /* Tool background color */
+    background-color: #9eb0ac;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
 }
 
-/* Header style */
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #fff; /* Header text color */
+    color: #fff;
 }
 
-/* Conversion section grid layout */
 .conversion-section {
     display: grid;
-    grid-template-columns: 1fr 120px; /* Input field takes 1fr (remaining space), dropdown takes 120px */
-    gap: 10px; /* Gap between input and dropdown */
-    margin-bottom: 10px; /* Bottom margin for spacing */
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-/* Input field style */
+.input-field, .currency-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .input-field {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Input field takes full width of its column */
+    width: 100%;
 }
 
-/* Currency dropdown style */
 .currency-dropdown {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Dropdown takes full width of its column */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    width: 120px;
 }
 
-/* Conversion rate display */
 .conversion-rate {
     margin-top: 10px;
-    color: #fff; /* Conversion rate text color */
+    color: #fff;
     text-align: center;
 }
-
