@@ -1,13 +1,13 @@
-/* css file to manage the format of the tool */
+/* styles.css */
 
-/* Reset styles */
+/* Reset margins and paddings, set box-sizing to border-box */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Basic styling for body */
 body {
     font-family: Arial, sans-serif;
     background-color: #830251; /* Page background color */
@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* Converter container */
+/* Styling for the main converter container */
 .converter {
     max-width: 600px;
     margin: 0 auto;
@@ -26,44 +26,42 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Header style */
+/* Styling for the main header */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #fff; /* Header text color */
 }
 
-/* Conversion section grid layout */
+/* Grid layout for conversion sections */
 .conversion-section {
     display: grid;
-    grid-template-columns: 1fr 120px; /* Input field takes 1fr (remaining space), dropdown takes 120px */
-    gap: 10px; /* Gap between input and dropdown */
+    grid-template-columns: 1fr auto; /* Two columns: input field and dropdown */
+    gap: 10px; /* Gap between columns */
     margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
-/* Input field style */
+/* Basic styling for input fields and dropdowns */
+.input-field, .currency-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Input field takes full width available in its column */
 .input-field {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Input field takes full width of its column */
+    width: 100%;
 }
 
-/* Currency dropdown style */
+/* Fixed width for dropdown */
 .currency-dropdown {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Dropdown takes full width of its column */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    width: 120px;
 }
 
-/* Conversion rate display */
+/* Styling for conversion rate display */
 .conversion-rate {
     margin-top: 10px;
     color: #fff; /* Conversion rate text color */
     text-align: center;
 }
-

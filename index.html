@@ -9,13 +9,12 @@
     <meta name="author" content="Curtis Scholey">
     <link rel="stylesheet" href="styles.css">
 </head>
-    
 <body>
     <div class="converter">
         <h1>Currency Converter</h1>
         
         <!-- First Conversion Section (First input box and currency dropdown box) -->
-        <div class="conversion-section-1">
+        <div class="conversion-section">
             <input type="number" id="inputOne" class="input-field" placeholder="Enter amount">
             <select id="currencyOne" class="currency-dropdown">
                 <!-- Options will be dynamically added using JavaScript -->
@@ -23,7 +22,7 @@
         </div>
 
         <!-- Second Conversion Section (Second input box and currency dropdown box) -->
-        <div class="conversion-section-2">
+        <div class="conversion-section">
             <input type="number" id="inputTwo" class="input-field" placeholder="Enter amount">
             <select id="currencyTwo" class="currency-dropdown">
                 <!-- Options will be dynamically added using JavaScript -->
@@ -32,8 +31,9 @@
 
         <!-- Conversion Rate Display -->
         <div class="conversion-rate">
-            <strong>Conversion Rate:</strong> <span id="conversionRate"></span> <span id="conversionRate">1 : 1</span>
+            <strong>Conversion Rate:</strong> <span id="conversionRate">1 : 1</span>
         </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
