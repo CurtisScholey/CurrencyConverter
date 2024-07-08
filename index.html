@@ -3,38 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <title>Currency Converter</title>
-    <meta name="description" content="Currency Converter Tool">
-    <meta name="author" content="Curtis Scholey">
-    <link rel="stylesheet" href="styles.css">
+    <title>Using API Key in HTML</title>
 </head>
 <body>
-    <div class="converter">
-        <h1>Currency Converter</h1>
+    <h1>Using API Key in HTML</h1>
+    
+    <p>Here is your API key: <span id="apiKey"></span></p>
+    
+    <script>
+        // Embedding the API key directly in JavaScript (not recommended for production)
+        const apiKey = "${{ secrets.MY_API }}";
         
-        <!-- First Conversion Section (First input box and currency dropdown box) -->
-        <div class="conversion-section">
-            <input type="number" id="inputOne" class="input-field" placeholder="Enter amount" value="100">
-            <select id="currencyOne" class="currency-dropdown">
-                <!-- Options will be dynamically added using JavaScript -->
-            </select>
-        </div>
-
-        <!-- Second Conversion Section (Second input box and currency dropdown box) -->
-        <div class="conversion-section">
-            <input type="number" id="inputTwo" class="input-field" placeholder="Enter amount" value="100">
-            <select id="currencyTwo" class="currency-dropdown">
-                <!-- Options will be dynamically added using JavaScript -->
-            </select>
-        </div>
-
-        <!-- Conversion Rate Display -->
-        <div class="conversion-rate">
-            <strong>${MY_API} </strong> <span id="conversionRate">1 : 1</span>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        // Display the API key in the HTML
+        document.getElementById("apiKey").textContent = apiKey;
+        
+        // Example usage: You could use this API key in JavaScript fetch requests, etc.
+        // Note: In production, you should not expose your API key directly like this in client-side code.
+    </script>
 </body>
 </html>
