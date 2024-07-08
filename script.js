@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${baseCurrency}`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
         const data = await response.json(); // Parse JSON response
         const currencies = Object.keys(data.conversion_rates); // Get list of available currencies
 
