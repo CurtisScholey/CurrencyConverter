@@ -12,7 +12,7 @@
     
     <script>
         // Embedding the API key directly in JavaScript (not recommended for production)
-        const apiKey = "${{ secrets.MY_API }}";
+        const apiKey = "${secrets.MY_API}";
         
         // Display the API key in the HTML
         document.getElementById("apiKey").textContent = apiKey;
