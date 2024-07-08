@@ -1,27 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
+// script.js
+
+// Import the getApiKey function from app.js
+const { getApiKey } = require('./app'); // Adjust the path as per your file structure
+
+document.addEventListener('DOMContentLoaded', async function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
     const inputTwo = document.getElementById('inputTwo'); // Second input field for amount
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-    require('dotenv').config();
 
-    console.log(process.env);
-    const apiKey = 'process.env.API_KEY'; // API key
-
-    // Fetch exchange rates and populate dropdowns
+    // Fetch exchange rates function
     async function fetchExchangeRates(baseCurrency = 'USD') {
-        // Fetch exchange rates from the API using the base currency
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
-        const data = await response.json(); // Parse JSON response
-        const currencies = Object.keys(data.conversion_rates); // Get list of available currencies
-
-        // Populate both currency dropdowns with the list of currencies
-        populateDropdown(currencyOne, currencies);
-        populateDropdown(currencyTwo, currencies);
-
-        // Update conversion rate display with default or current selections
-        updateConversionRate();
+        try {
+            const apiKey = getApiKey(); // Get the API key
+            // Fetch exchange rates from the API using the base currency
+            const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
+            const data = await response.json(); // Parse JSON response
+            return data;
+        } catch (error) {
+            console.error('Error fetching exchange rates:', error);
+        }
     }
 
     // Populate dropdown with currency options
@@ -32,21 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update conversion rate display
     async function updateConversionRate() {
-        // Get selected currencies from dropdowns
-        const baseCurrency = currencyOne.value;
-        const targetCurrency = currencyTwo.value;
+        try {
+            const apiKey = getApiKey(); // Get the API key
+            // Get selected currencies from dropdowns
+            const baseCurrency = currencyOne.value;
+            const targetCurrency = currencyTwo.value;
 
-        // Fetch exchange rates from the API using the selected base currency
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
-        const data = await response.json(); // Parse JSON response
+            // Fetch exchange rates from the API using the selected base currency
+            const data = await fetchExchangeRates(baseCurrency);
 
-        // Get the conversion rate for the target currency
-        const rate = data.conversion_rates[targetCurrency];
-        // Update the conversion rate display text
-        conversionRateDisplay.textContent = `1 ${baseCurrency} : ${rate} ${targetCurrency}`;
-        
-        // Calculate and display the converted amount in the second input field
-        inputTwo.value = (inputOne.value * rate).toFixed(2);
+            // Get the conversion rate for the target currency
+            const rate = data.conversion_rates[targetCurrency];
+            
+            // Update the conversion rate display text
+            conversionRateDisplay.textContent = `1 ${baseCurrency} : ${rate} ${targetCurrency}`;
+
+            // Calculate and display the converted amount in the second input field
+            inputTwo.value = (inputOne.value * rate).toFixed(2);
+        } catch (error) {
+            console.error('Error updating conversion rate:', error);
+        }
     }
 
     // Event listeners to update conversion rate on input or dropdown change
