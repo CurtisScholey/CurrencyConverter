@@ -8,11 +8,8 @@ on:
 jobs:
   deploySecret:
     runs-on: ubuntu-latest
+    env:
+      MY_API: ${{ secrets.API_KEY }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
       - name: Use the secret in an environment variable
-        run: echo "The API key is ${{ secrets.MY_API }}"
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
+        run: echo "The API key is ${{ secrets.API_KEY }}"
