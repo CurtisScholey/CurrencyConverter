@@ -4,12 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-    const apiKey = '132e8ef7c1d49498628ffb91'; // Correct API key
+    //const apiKey = '132e8ef7c1d49498628ffb91'; // Correct API key
 
+    // Define your API key variable
+    const API_KEY = "${{ secrets.API_KEY }}";
+    
+    // Example usage of API_KEY
+    console.log("API Key:", API_KEY);
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
+        //const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${baseCurrency}`);
         const data = await response.json(); // Parse JSON response
         const currencies = Object.keys(data.conversion_rates); // Get list of available currencies
 
@@ -34,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetCurrency = currencyTwo.value;
 
         // Fetch exchange rates from the API using the selected base currency
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
+        //const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${baseCurrency}`);
         const data = await response.json(); // Parse JSON response
 
         // Get the conversion rate for the target currency
