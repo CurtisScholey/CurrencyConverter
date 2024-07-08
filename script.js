@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-    const apiKey = '132e8ef7c1d49498628ffb91'; // API key
+    require('dotenv').config();
+
+    console.log(process.env);
+    const apiKey = 'process.env.API_KEY'; // API key
 
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
