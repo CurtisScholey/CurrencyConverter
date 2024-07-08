@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  example-job:
+  deploySecret:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -15,4 +15,4 @@ jobs:
       - name: Use the secret in an environment variable
         run: echo "The API key is ${{ secrets.MY_API }}"
         env:
-          API_KEY: ${{ secrets.MY_API }}
+          API_KEY: ${{ secrets.API_KEY }}
