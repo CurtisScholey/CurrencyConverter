@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
     //const apiKey = '132e8ef7c1d49498628ffb91'; 
+    
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
