@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const inputOneValue = parseFloat(inputOne.value);
         const inputTwoValue = parseFloat(inputTwo.value);
 
+        /*
         if (document.activeElement === inputOne) {
             inputTwo.value = (convertCurrency(inputOneValue, rate))
             //inputTwo.value = (inputOneValue * rate).toFixed(2);
@@ -52,6 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
             inputOne.value = (convertCurrency(inputTwoValue, rate))
 
         }
+        */
+       if (document.activeElement === inputTwo){
+        inputOne.value = (convertCurrency(inputTwoValue, rate))
+       }
+       else{
+        inputTwo.value = (convertCurrency(inputOneValue, rate))
+       }
     }
 
     // Event listeners to update conversion rate on input or dropdown change
