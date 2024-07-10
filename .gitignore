@@ -25,3 +25,6 @@ replay_pid*
 
 # env with API code
 .env
+
+# hides the config.js file
+config.js
