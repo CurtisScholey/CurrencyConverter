@@ -3,9 +3,9 @@ SF:logic.js
 FN:3,convertCurrency
 FNF:1
 FNH:1
-FNDA:7,convertCurrency
-DA:4,7
-DA:5,7
+FNDA:10,convertCurrency
+DA:4,10
+DA:5,10
 LF:2
 LH:2
 BRF:0
