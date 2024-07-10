@@ -1,5 +1,4 @@
-// Load environment variables from .env file
-require('dotenv').config();
+const { apiKeyConfig } = require('./config');
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
@@ -7,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-    const apiKey = process.env.API_KEY; // Use API key from environment variables
-
+    const apiKey = apiKeyConfig; // Use API key from environment variables
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
