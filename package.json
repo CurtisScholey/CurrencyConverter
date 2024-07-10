@@ -5,8 +5,8 @@
   "main": "script.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
-  },
+    "testUI": "jest /index.test.js",
+"testFunc": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage --verbose logic.test.js"  },
   "author": "Curtis Scholey",
   "license": "MIT",
   "devDependencies": {

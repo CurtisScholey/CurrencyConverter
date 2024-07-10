@@ -2,21 +2,16 @@ const { JSDOM } = require('jsdom');
 const fs = require('fs');
 const path = require('path');
 
-// Read the HTML file
 const html = fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8');
 
 let dom;
 let container;
 
-// Setup JSDOM before each test
 beforeEach(() => {
-    // Initialize JSDOM
     dom = new JSDOM(html, { runScripts: 'dangerously', resources: 'usable' });
-    // Set the document body to container for easy querying
     container = dom.window.document.body;
 });
 
-// Jest test suite for Currency Converter
 describe('Currency Converter Tests', () => {
     // Smoke tests for UI elements
     describe('UI Elements', () => {
