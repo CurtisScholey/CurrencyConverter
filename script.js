@@ -1,5 +1,5 @@
-const { apiKey } = require('./config');
-const { convertCurrency } = require('./logic');
+const { apiKey } = require('./config'); //Calls the API key from logic.js, allowing it to be hidden in .env
+const { convertCurrency } = require('./logic'); //Calls the conversion function from logic.js, allowing it to be tested
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-    //const apiKey = '132e8ef7c1d49498628ffb91'; // Correct API key
 
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
@@ -45,10 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update the conversion rate display text
         conversionRateDisplay.textContent = `1 ${baseCurrency} : ${rate} ${targetCurrency}`;
         
-        // Calculate and display the converted amount in the second input field
-        //inputTwo.value = (inputOne.value * rate).toFixed(2);                
+        // Calculate and display the converted amount in the second input field - uses the function from within logic.js
         inputTwo.value = convertCurrency(inputOne.value * rate).tofixed(2);
-
     }
 
     // Event listeners to update conversion rate on input or dropdown change
