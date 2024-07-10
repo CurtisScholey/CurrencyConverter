@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
         conversionRateDisplay.textContent = `1 ${baseCurrency} : ${rate} ${targetCurrency}`;
         
         // Calculate and display the converted amount in the second input field
-        inputTwo.value = (inputOne.value * rate).toFixed(2);
+        //inputTwo.value = (inputOne.value * rate).toFixed(2);                
+        inputTwo.value = convertCurrency(inputOne.value * rate).tofixed(2);
+
     }
 
     // Event listeners to update conversion rate on input or dropdown change
