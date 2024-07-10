@@ -1,17 +1,5 @@
 const { apiKey } = require('./config');
 
-try {
-    const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json(); // Parse JSON response
-    console.log(data); // Log parsed JSON data
-    // Continue processing data
-} catch (error) {
-    console.error('Error fetching or parsing data:', error);
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
     const inputTwo = document.getElementById('inputTwo'); // Second input field for amount
