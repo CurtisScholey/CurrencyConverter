@@ -1,4 +1,5 @@
 const { apiKey } = require('./config');
+const { convertCurrency } = require('./logic');
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
