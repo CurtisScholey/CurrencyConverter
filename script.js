@@ -1,9 +1,5 @@
-//import { apiKey } from './config.js';
+import { apiKey } from './config.js';
 import { convertCurrency } from './logic.js';
-import { config as dotenvConfig } from 'dotenv';
-dotenvConfig();
-const apiKey = process.env.API_KEY;
-console.log(`API Key: ${apiKey}`);
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
