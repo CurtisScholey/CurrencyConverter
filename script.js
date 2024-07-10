@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
-        const response = await fetch(https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency});
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
         const data = await response.json(); // Parse JSON response
         const currencies = Object.keys(data.conversion_rates); // Get list of available currencies
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Populate dropdown with currency options
     function populateDropdown(dropdown, currencies) {
         // Map each currency to an option element and join them into a single string
-        dropdown.innerHTML = currencies.map(currency => <option value="${currency}">${currency}</option>).join('');
+        dropdown.innerHTML = currencies.map(currency => `<option value="${currency}">${currency}</option>`).join('');
     }
 
     // Update conversion rate display
@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetCurrency = currencyTwo.value;
 
         // Fetch exchange rates from the API using the selected base currency
-        const response = await fetch(https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency});
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`);
         const data = await response.json(); // Parse JSON response
 
         // Get the conversion rate for the target currency
         const rate = data.conversion_rates[targetCurrency];
         // Update the conversion rate display text
-        conversionRateDisplay.textContent = 1 ${baseCurrency} : ${rate} ${targetCurrency};
+        conversionRateDisplay.textContent = `1 ${baseCurrency} : ${rate} ${targetCurrency}`;
         
         // Calculate and display the converted amount in the second input field
         inputTwo.value = (inputOne.value * rate).toFixed(2);
