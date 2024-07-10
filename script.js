@@ -1,4 +1,4 @@
-const { apiKey } = require('./config');
+import { apiKey } from './config.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
