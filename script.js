@@ -1,5 +1,4 @@
 const { apiKey } = require('./config');
-const { convertCurrency } = require('./logic');
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputOne = document.getElementById('inputOne'); // First input field for amount
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currencyOne = document.getElementById('currencyOne'); // First currency dropdown
     const currencyTwo = document.getElementById('currencyTwo'); // Second currency dropdown
     const conversionRateDisplay = document.getElementById('conversionRate'); // Display for conversion rate
-
+    
     // Fetch exchange rates and populate dropdowns
     async function fetchExchangeRates(baseCurrency = 'USD') {
         // Fetch exchange rates from the API using the base currency
