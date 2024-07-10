@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const inputTwoValue = parseFloat(inputTwo.value);
 
         if (document.activeElement === inputOne) {
-            inputTwo.value = convertCurrency(inputOne, rate).tofixed(2);
+            inputTwo.value = (convertCurrency(inputOne, rate)).tofixed(2);
             //inputTwo.value = (inputOneValue * rate).toFixed(2);
         } else if (document.activeElement === inputTwo) {
             inputOne.value = (inputTwoValue / rate).toFixed(2);
