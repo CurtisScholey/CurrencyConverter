@@ -2,7 +2,7 @@
   "name": "testing",
   "version": "1.0.0",
   "description": "Currency converter app for Software Engineering Summative 1",
-  "main": "index.test.js",
+  "main": "script.js",
   "scripts": {
     "test": "jest"
   },
