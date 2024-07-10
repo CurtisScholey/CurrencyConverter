@@ -1,8 +1,9 @@
 {
-  "name": "testing",
+  "name": "currency_converter",
   "version": "1.0.0",
   "description": "Currency converter app for Software Engineering Summative 1",
   "main": "script.js",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
