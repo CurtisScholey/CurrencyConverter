@@ -1,4 +1,4 @@
-import dotenv from 'dotenv'; //Imports env
+import dotenv from './env'; //Imports env
 
 dotenv.config(); 
 
@@ -7,3 +7,5 @@ const apiKey = process.env.API_KEY; //Summons api key
 console.log(apiKey); //Logging the API key for verification purposes
 
 export { apiKey }; //Exports apikey
+
+
