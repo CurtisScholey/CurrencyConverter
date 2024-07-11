@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset margins and paddings, set box-sizing to border-box */
 * {
     margin: 0;
@@ -10,7 +8,7 @@
 /* Basic styling for body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #830251; /* Page background color */
+    background-color: #9eb0ac; /* Page background color */
     color: #000; /* Text color */
     padding: 20px;
 }
@@ -19,7 +17,7 @@ body {
 .converter {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #9eb0ac; /* Tool background color */
+    background-color: #830251; /* Tool background color */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,32 +34,47 @@ h1 {
 /* Grid layout for conversion sections */
 .conversion-section {
     display: grid;
-    grid-template-columns: 1fr auto; /* Two columns: input field and dropdown */
+    grid-template-columns: auto 1fr; /* Two columns: title and input field/dropdown */
     gap: 10px; /* Gap between columns */
-    margin-bottom: 10px; /* Bottom margin for spacing */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Bottom margin for spacing */
 }
 
-/* Basic styling for input fields and dropdowns */
-.input-field, .currency-dropdown {
+/* Styling for labels */
+.title {
+    font-weight: bold;
+    color: #fff; /* Label text color */
+    min-width: 60px; /* Minimum width to align "To:" with "From:" */
+}
+
+/* Flexbox for input fields and dropdowns */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Gap between input and dropdown */
+}
+
+/* Basic styling for input fields */
+.input-field {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    flex: 1; /* Input field grows to take available space */
 }
 
-/* Input field takes full width available in its column */
-.input-field {
-    width: 100%;
-}
-
-/* Fixed width for dropdown */
+/* Smaller width for dropdown */
 .currency-dropdown {
-    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px; /* Adjusted width for dropdown */
 }
 
 /* Styling for conversion rate display */
 .conversion-rate {
-    margin-top: 10px;
+    margin-top: 20px;
     color: #fff; /* Conversion rate text color */
     text-align: center;
 }

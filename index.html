@@ -13,28 +13,31 @@
     <div class="converter">
         <h1>Currency Converter</h1>
         
-        <!-- First Conversion Section (First input box and currency dropdown box) -->
         <div class="conversion-section">
-            <input type="number" id="inputOne" class="input-field" placeholder="Enter amount" value="100">
-            <select id="currencyOne" class="currency-dropdown">
-                <!-- Options will be dynamically added using JavaScript -->
-            </select>
+            <div class="title">From:</div>
+            <div class="input-container">
+                <input type="number" id="inputOne" class="input-field" placeholder="Enter amount" value="100">
+                <select id="currencyOne" class="currency-dropdown">
+                    <!-- Options will be dynamically added using JavaScript -->
+                </select>
+            </div>
         </div>
 
-        <!-- Second Conversion Section (Second input box and currency dropdown box) -->
         <div class="conversion-section">
-            <input type="number" id="inputTwo" class="input-field" placeholder="Enter amount" value="100">
-            <select id="currencyTwo" class="currency-dropdown">
-                <!-- Options will be dynamically added using JavaScript -->
-            </select>
+            <div class="title">To:</div>
+            <div class="input-container">
+                <input type="number" id="inputTwo" class="input-field" placeholder="Enter amount" value="100">
+                <select id="currencyTwo" class="currency-dropdown">
+                    <!-- Options will be dynamically added using JavaScript -->
+                </select>
+            </div>
         </div>
 
-        <!-- Conversion Rate Display -->
         <div class="conversion-rate">
             <strong>Conversion Rate:</strong> <span id="conversionRate">1 : 1</span>
         </div>
     </div>
 
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
 </body>
 </html>
