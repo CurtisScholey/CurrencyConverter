@@ -79,6 +79,6 @@ test('reverse being true, 100 at rate .5 should be 200', () => {
     const valueOne = 100;
     const rate = 0.5;
     const reverse = true;
-    const convertedValue = convertCurrenct(valueOne, rate, reverse);
+    const convertedValue = convertCurrency(valueOne, rate, reverse);
     expect(convertedValue).toBe('200');
 });
