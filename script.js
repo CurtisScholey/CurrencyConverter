@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const inputTwoValue = parseFloat(inputTwo.value);
 
        if (document.activeElement === inputTwo){
-        inputOne.value = (convertCurrency(inputTwoValue, rate))
+        inputOne.value = (convertCurrency(inputTwoValue, rate, true))
        }
        else{
-        inputTwo.value = (convertCurrency(inputOneValue, rate))
+        inputTwo.value = (convertCurrency(inputOneValue, rate, false))
        }
     }
 
