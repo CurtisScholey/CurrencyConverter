@@ -74,3 +74,11 @@ test('£0.000001 at rate 1000000 should convert to 1.00', () => {
     const convertedValue = convertCurrency(valueOne, rate);
     expect(convertedValue).toBe('1.00');
 });
+
+test('reverse being true, 100 at rate .5 should be 200', () => {
+    const valueOne = 100;
+    const rate = 0.5;
+    reverse = true;
+    const convertedValue = convertCurrenct(valueOne, rate, reverse);
+    expect(convertedValue).toBe('200');
+});
