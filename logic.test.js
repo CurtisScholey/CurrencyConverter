@@ -75,6 +75,7 @@ test('£0.000001 at rate 1000000 should convert to 1.00', () => {
     expect(convertedValue).toBe('1.00');
 });
 
+// confirming reverse aspect of function works
 test('reverse being true, 100 at rate .5 should be 200', () => {
     const valueOne = 100;
     const rate = 0.5;
