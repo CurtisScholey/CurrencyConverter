@@ -3,6 +3,8 @@ Currency converter app for Software Engineering Summative 1
 ![image](https://github.com/user-attachments/assets/fbebf150-26db-48c2-9862-b608b495dc7c)
 [Link to the site](https://curtisscholey.github.io/CurrencyConverter/)
 
+[Link to the repository](https://github.com/CurtisScholey/CurrencyConverter/)
+
 ## Introduction
 My workplace is an international business and as such often requires the conversion of currency. To this end, I will begin the creation of an online currency converter internal to the company.
 This will enable our business & finance departments to convert currency quickly and efficiently, without the worry of using publicly available tools - As preventing any potential data collection on company finances is a key security consideration.
